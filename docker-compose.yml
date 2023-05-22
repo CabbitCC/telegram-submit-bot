@@ -1,0 +1,13 @@
+# yaml 
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    networks:
+      - webnet
+    env_file:
+      - .env
+networks:
+  webnet:
